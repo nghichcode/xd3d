@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miếu Việt Nam — 3D Viewer</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main id="app">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">MÔ HÌNH KIẾN TRÚC 3D</p>
+          <h1>Miếu Việt Nam</h1>
+          <p class="subtitle">Viewer ngoại thất theo kích thước bản vẽ tham khảo</p>
+        </div>
+        <div id="status" class="status">Đang khởi tạo mô hình…</div>
+      </section>
+      <aside class="panel">
+        <h2>Hiển thị</h2>
+        <label><input type="checkbox" data-target="structure" checked /> Kết cấu</label>
+        <label><input type="checkbox" data-target="roof" checked /> Mái & ngói</label>
+        <label><input type="checkbox" data-target="doors" checked /> Cửa</label>
+        <label><input type="checkbox" data-target="ornaments" checked /> Hoa văn</label>
+        <label><input type="checkbox" data-target="site" checked /> Nền & bậc</label>
+        <button id="reset">Đặt lại camera</button>
+        <p class="hint">Kéo để xoay · cuộn để zoom · kéo phải để pan</p>
+      </aside>
+      <div id="canvas-wrap"></div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
